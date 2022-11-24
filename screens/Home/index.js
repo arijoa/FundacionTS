@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import {Text, View } from 'react-native';
+import {Text, View, Button } from 'react-native';
 import styles from './styles';
 import FundacionFlatList from '../../components/FundacionFlatList' 
 import fundacionServices from '../../services/fundaciones';
 import { useEffect, useState } from 'react';
 
-export default function Home() {
+export default function Home({navigation}) {
  
   const[fundaciones, setFundaciones] = useState([])
 
@@ -18,10 +18,12 @@ export default function Home() {
   
   return (
         <View style={styles.container}>
+          {/* <Button
+                    onPress={() => navigation.navigate("Details")}
+                /> */}
          
             <View>  
-             <FundacionFlatList fundaciones={fundaciones} /> 
-            {/* <FundacionScrollView fundaciones={fundaciones} /> */}
+             <FundacionFlatList fundaciones={fundaciones} navigation={navigation} /> 
             </View>
         
             <StatusBar style="auto" />

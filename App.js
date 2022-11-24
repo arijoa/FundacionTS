@@ -13,7 +13,7 @@ const StackNavigator = createNativeStackNavigator()
      <NavigationContainer>
      <StackNavigator.Navigator initialRouteName='Home'>
        <StackNavigator.Screen name='Home' component={Home}/>
-       {/* <StackNavigator.Screen name='Details' component={Details}/> */}
+      <StackNavigator.Screen name='Details' component={Details}/> 
      </StackNavigator.Navigator>
     </NavigationContainer> 
      //<Home /> 

@@ -9,10 +9,10 @@ return(
        <Card containerStyle={{ marginTop: 15 }}>
           <Card.Title>Fundaciones</Card.Title>
           <Card.Divider />
-          <Image  
+           <Image  
                   style={Styles.image}
                   resizeMode="cover"
-                  source={{uri: fundacion.avatar}} />
+                  source={{uri: fundacion.avatar}} /> 
           <Text h1>
             Nombre: {fundacion.name}
           </Text>
