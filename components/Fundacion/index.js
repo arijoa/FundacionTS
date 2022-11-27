@@ -3,7 +3,7 @@ import{View, Text, Image} from "react-native"
 import { Card } from '@rneui/themed';
 import Styles from './Styles'
 
-const Fundacion = ({fundacion})=> {
+const Fundacion = ({fundacion, showAll})=> {
 return(
     <View>
        <Card containerStyle={{ marginTop: 15 }}>
@@ -16,10 +16,16 @@ return(
           <Text h1>
             Nombre: {fundacion.name}
           </Text>
+        {
+          showAll ?
+          <>
           <Text h2>
            Cvu: {fundacion.cvu}
           </Text>
-          
+          </>
+          :
+          <></>
+        }
         </Card>
     </View>
 )
