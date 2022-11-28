@@ -1,5 +1,5 @@
 import {FlatList,Text, TouchableOpacity, View } from 'react-native';
-import Fundacion from '../fundacion';
+import Fundacion from '../Fundacion';
 
 export default function fundacionFlatList({fundaciones, navigation}) {
     const renderfundacion = ({item})=>{

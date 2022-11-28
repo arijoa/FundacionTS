@@ -8,7 +8,7 @@ import AuthContext from "../../services/AuthContext";
 const Login= () =>{
 
     const [request, response, promptAsync] = Google.useAuthRequest({
-        expoClientId: '768824412613-c6rt0pm4h5ecoqmeblabt23jnkfs0jlr.apps.googleusercontent.com  ' 
+        expoClientId: '768824412613-c6rt0pm4h5ecoqmeblabt23jnkfs0jlr.apps.googleusercontent.com' 
        
       });
 
