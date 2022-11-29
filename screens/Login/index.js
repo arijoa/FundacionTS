@@ -17,7 +17,6 @@ const Login= () =>{
       useEffect(() => {
         if (response?.type === 'success') {
           const { authentication } = response;
-          console.log("aaaaaaaaaaaaaaaaaauthentication", authentication)
           AuthServices.login(authentication.accessToken).then(data=>{
             console.log(data);
             setAuthenticationData(data)
@@ -28,12 +27,14 @@ const Login= () =>{
     return( 
         <SafeAreaView>
             <View>
-                <Button
-                title="Login"
-                onPress={() => {
-                    promptAsync()
-                }}
-                />
+                <Background>
+                    <Logo />
+                    <Header>Bienvenido!</Header>
+                    <Button
+                        title="Login"
+                        onPress={() => { promptAsync() }}
+                        />
+                </Background> 
             </View>
         </SafeAreaView>
         )

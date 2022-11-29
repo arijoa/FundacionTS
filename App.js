@@ -12,7 +12,7 @@ import AuthContext from './services/AuthContext';
 export default function App() {
 
  const [authenticationData, setAuthenticationData] = useState(authData)
-//const [authenticationData, setAuthenticationData] = useState(true )
+
 
 const StackNavigator = createNativeStackNavigator()
 
