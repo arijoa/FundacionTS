@@ -17,7 +17,7 @@ const Login= () =>{
       useEffect(() => {
         if (response?.type === 'success') {
           const { authentication } = response;
-          
+          console.log("aaaaaaaaaaaaaaaaaauthentication", authentication)
           AuthServices.login(authentication.accessToken).then(data=>{
             console.log(data);
             setAuthenticationData(data)
