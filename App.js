@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Details from './screens/Details';
 import { useState } from 'react';
 import Login from './screens/Login';
+import Start from './screens/StartScreen';
 import {authData} from './services/AuthContext';
 import AuthContext from './services/AuthContext';
 
@@ -27,11 +28,14 @@ const StackNavigator = createNativeStackNavigator()
 
                 <>
                 <StackNavigator.Screen name='Home' component={Home}/>
-                <StackNavigator.Screen name='Details' component={Details}/> 
-                  </>
+                <StackNavigator.Screen name='Details' component={Details}/>
+                <StackNavigator.Screen name='Login' component={Login}/>  
+                </>
 
             :
-            <StackNavigator.Screen name='Login' component={Login}/> 
+            <StackNavigator.Screen name='Todo Suma' component={Login}/> 
+            //Si quiero que arranque desde pantalla de STart pero no funciona botón ingresar
+            //<StackNavigator.Screen name='Todo Suma' component={Start}/> 
           
 
           }
