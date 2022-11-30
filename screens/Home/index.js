@@ -18,9 +18,6 @@ export default function Home({navigation}) {
   
   return (
         <View style={styles.container}>
-          {/* <Button
-                    onPress={() => navigation.navigate("Details")}
-                /> */}
          
             <View>  
              <FundacionFlatList fundaciones={fundaciones} navigation={navigation} /> 

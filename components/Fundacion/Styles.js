@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
       fontSize: 16,
       marginTop: 5,
     },
+    favorites: {
+     position:"absolute",
+     top:0,
+     right:0,
+     backgroundColor:"#fff"
+     
+    },
     
     });
     export default styles

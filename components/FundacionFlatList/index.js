@@ -7,10 +7,9 @@ export default function fundacionFlatList({fundaciones, navigation}) {
             <TouchableOpacity
             onPress={() => navigation.navigate('Details', { fundacion: item})}
             >
-              <Fundacion fundacion={item} showAll={false} />
+               <Fundacion fundacion={item} showAll={false} /> 
             </TouchableOpacity>
                
-       
           
         )
 

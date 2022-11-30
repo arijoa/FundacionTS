@@ -1,5 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context"
-import { Button, View } from "react-native"
+import { Button, View, Text } from "react-native"
 import { useContext, useEffect } from "react"
 import * as Google from 'expo-auth-session/providers/google';
 import AuthServices from '../../services/login'
@@ -39,4 +39,5 @@ const Login= () =>{
         )
    
 }
+
 export default Login
