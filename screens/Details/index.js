@@ -16,11 +16,11 @@ const Details = ({navigation, route})=>{
        <SafeAreaView style={styles.container}>
        <View>
           
-            <SafeAreaView>
+            <SafeAreaView style = {styles.carta}>
             <Fundacion fundacion={fundacion} showAll={true} isFavorite={isFavorite} toggleFavorite={toggleFavorite} />
             </SafeAreaView>
-          <Text>Ubicacion</Text>
-            <SafeAreaView>
+          <Text style={styles.text}>Ubicacion</Text>
+            <SafeAreaView style={styles.map}>
             <Map fundacion={fundacion}/>
             </SafeAreaView>
            

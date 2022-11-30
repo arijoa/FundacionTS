@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
       marginBottom: 6,
     },
     image: {
-      width: 50,
-      height: 30,
+      width: 40,
+      height: 36,
       marginRight: 15,
     },
     name: {
@@ -24,6 +24,12 @@ const styles = StyleSheet.create({
      backgroundColor:"#fff"
      
     },
+    title2:{
+      // fontFamily: 'NotoSans-Thin',
+       color: '#566573',
+       fontSize: 19,
+       marginBottom:10,
+   },
     
     });
     export default styles

@@ -65,7 +65,7 @@ return (
     <LoginStack.Navigator>
       <LoginStack.Screen name='Login' component={Login}/> 
     </LoginStack.Navigator>
-  }
+}
     </NavigationContainer> 
     </FavoritesProvider>
     </AuthContext.Provider>

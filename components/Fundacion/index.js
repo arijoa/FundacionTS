@@ -9,13 +9,13 @@ const Fundacion = ({fundacion, showAll, isFavorite, toggleFavorite})=> {
 return(
     <View>
        <Card containerStyle={{ marginTop: 15 }}>
-          <Card.Title>Fundaciones</Card.Title>
-          <Card.Divider />
+          {/* <Card.Title>Fundacion</Card.Title> */}
+          {/* <Card.Divider /> */}
            <Image  
                   style={Styles.image}
                   resizeMode="cover"
                   source={{uri: fundacion.avatar}} /> 
-          <Text h1>
+          <Text style={Styles.title2}>
             Nombre: {fundacion.name}
           </Text>
         {
@@ -30,7 +30,7 @@ return(
               size={35}
             />
           </View>
-          <Text h2>
+          <Text style={Styles.title2}>
            Cvu: {fundacion.cvu}
           </Text>
           </>
