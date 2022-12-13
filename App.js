@@ -1,4 +1,3 @@
-
 import Home from './screens/Home';
 import fundaciones from './services/fundaciones';
 import {NavigationContainer} from '@react-navigation/native'
@@ -11,7 +10,6 @@ import {authData} from './services/AuthContext';
 import AuthContext from './services/AuthContext';
 import { FavoritesProvider } from './services/FavoriteContext';
 import Favorites from './screens/Favorites';
-
 
 const HomeStack = createNativeStackNavigator();
 
@@ -37,7 +35,7 @@ function FavoritesStackScreen() {
 
 export default function App() {
 
-   const [authenticationData, setAuthenticationData] = useState(authData)
+const [authenticationData, setAuthenticationData] = useState(authData)
 //const [authenticationData, setAuthenticationData] = useState(true )
 
 const BottomTabNavigator = createBottomTabNavigator()

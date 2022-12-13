@@ -1,11 +1,15 @@
-
-import{View, Text, Image} from "react-native"
+import{View, Text, Image,Button} from "react-native"
 import { Card } from '@rneui/themed';
 import Styles from './Styles'
 import { Icon } from "@rneui/base";
+import * as Clipboard from 'expo-clipboard';
 
+const copyToClipboard = async () => {
+  await Clipboard.setStringAsync(cvuCopiado);
+};
 
 const Fundacion = ({fundacion, showAll, isFavorite, toggleFavorite})=> {
+  cvuCopiado=fundacion.cvu
 return(
     <View>
        <Card containerStyle={{ marginTop: 15 }}>
@@ -32,6 +36,7 @@ return(
           </View>
           <Text style={Styles.title2}>
            Cvu: {fundacion.cvu}
+           <Button title="Copiar CVU al portapapeles" onPress={copyToClipboard} />
           </Text>
           </>
           :
