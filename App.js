@@ -1,4 +1,3 @@
-
 import Home from './screens/Home';
 import fundaciones from './services/fundaciones';
 import {NavigationContainer} from '@react-navigation/native'
@@ -14,7 +13,6 @@ import Favorites from './screens/Favorites';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
 import asyncStorage from "./services/AsyncStorage";
-
 
 const HomeStack = createNativeStackNavigator();
 
@@ -40,7 +38,7 @@ function FavoritesStackScreen() {
 
 export default function App() {
 
-   const [authenticationData, setAuthenticationData] = useState(authData)
+const [authenticationData, setAuthenticationData] = useState(authData)
 //const [authenticationData, setAuthenticationData] = useState(true )
 
 const BottomTabNavigator = createBottomTabNavigator()
