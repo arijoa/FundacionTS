@@ -11,6 +11,9 @@ import {authData} from './services/AuthContext';
 import AuthContext from './services/AuthContext';
 import { FavoritesProvider } from './services/FavoriteContext';
 import Favorites from './screens/Favorites';
+import { useEffect } from 'react';
+import { useCallback } from 'react';
+import asyncStorage from "./services/AsyncStorage";
 
 
 const HomeStack = createNativeStackNavigator();
@@ -43,12 +46,27 @@ export default function App() {
 const BottomTabNavigator = createBottomTabNavigator()
 const LoginStack = createNativeStackNavigator();
 
-  
+useEffect(useCallback(() => {
+  console.log("Aqui tengo que verificar si existe data en la cache del dispositivo");
+  asyncStorage.getData(('AuthData'))
+    .then(data => {
+       console.log("Encontro data???", data);
+      if (data) {
+        setAuthenticationData(data)
+      }
+    })
+}), [])
+
+useEffect(useCallback(() => {
+  console.log("detecto cambio de auth", authenticationData);
+  asyncStorage.storeData('AuthData', authenticationData)
+   
+}), [authenticationData])
+
 
 return (
-
+  <FavoritesProvider>
     <AuthContext.Provider value={{ authenticationData, setAuthenticationData }}>
-      <FavoritesProvider>
 
       <NavigationContainer>
       { 
@@ -67,9 +85,9 @@ return (
     </LoginStack.Navigator>
 }
     </NavigationContainer> 
-    </FavoritesProvider>
     </AuthContext.Provider>
-   
+    
+    </FavoritesProvider>
     
   );
  

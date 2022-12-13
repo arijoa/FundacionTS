@@ -2,7 +2,7 @@ import { Button, SafeAreaView, View, StyleSheet, TouchableOpacity, Image, Text }
 import * as Google from 'expo-auth-session/providers/google';
 import { useContext, useEffect } from "react";
 import AuthService from "../../services/login";
-import AuthContext from "../../services/AuthContext";
+import AuthContext, { authData } from "../../services/AuthContext";
 import styles from './styles';
 
 const Login = () => {
@@ -20,6 +20,8 @@ const Login = () => {
 
             AuthService.login(authentication.accessToken).then(data => {
                 setAuthenticationData(data)
+               // AsyncStorage.storeData('authData', data)
+                
             })
 
 
